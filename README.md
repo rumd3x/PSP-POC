@@ -8,10 +8,10 @@ Copy this project contents into `PSP/GAME` folder and execute it like you would 
 
 ## How it works
 
-- This POC takes advantage of Stackless Python. It uses Stackless Python 2.5.2 port for PSP from [this repo](https://github.com/carlosedp/PSP-StacklessPython).
+- This POC is based on the concept of Stackless Python. It uses Stackless Python 2.5.2 port for PSP from [this repo](https://github.com/carlosedp/PSP-StacklessPython). The interpreter port is already compiled into `EBOOT.PBP` PSP binary.
 
 - When launched, the interpreter will try to find a "script.py" file in its directory and run it. If there is none, it will exit to XMB.
 
-- The `python` folder teoretically holds all python built-in libraries (the ones from Python 2.5 at least, but it is possible that some features were not fully ported) and are used by the Stackless Python interpreter at run time. **KEEP THIS FOLDER.**
+- The `python` folder teoretically holds all python built-in libraries (the ones from Python 2.5 at least, but it is possible that some features were not fully ported) and are used by the Stackless Python interpreter at run time. **KEEP THIS FOLDER AS IS.**
 
 - While developing, to enable code-completion for the PSP specific libraries, copy the files inside `dev-mocks` to the same folder as `script.py`. They are embeded into `EBOOT.PBP` when running on real hardware, so it can be safely discarted on a final release build.
